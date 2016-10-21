@@ -1,233 +1,115 @@
-$(document).ready(function(){
+class Particle {
+	constructor(context, x, y, d = 2, color = '#9294AE', movement = 10, lerp = 0.05) {
+		this.context = context;
 
-    "use strict";
+		this.x = this.currentX = this.targetX = x;
+		this.y = this.currentY = this.targetY = y;
+		this.d = d;
+		this.lerp = lerp;
+		this.color = color;
+		this.movement = movement;
+	}
 
+	draw() {
+		var context = this.context,
+			r = this.d / 2;
+		context.fillStyle = this.color;
+		context.beginPath();
 
-    /*
-     ----------------------------------------------------------------------
-     Preloader
-     ----------------------------------------------------------------------
-     */
-    $(".loader").delay(400).fadeOut();
-    $(".animationload").delay(400).fadeOut("fast");
+		var x = this.x - r,
+			y = this.y - r;
 
+		if (Math.abs(this.targetX - this.currentX) < this.movement * 0.1) {
+			this.targetX = x + Math.random() * this.movement * (Math.random() < 0.5 ? -1 : 1);
+		}
+		if (Math.abs(this.targetY - this.currentY) < this.movement * 0.1) {
+			this.targetY = y + Math.random() * this.movement * (Math.random() < 0.5 ? -1 : 1);
+		}
 
-    /*
-     ----------------------------------------------------------------------
-     Scroll
-     ----------------------------------------------------------------------
-     */
-    //Check to see if the window is top if not then display button
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 400) {
-            $('.scrollToTop').fadeIn();
-        } else {
-            $('.scrollToTop').fadeOut();
-        }
-    });
-    //Click event to scroll to top
-    $('.scrollToTop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
+		this.currentX += (this.targetX - this.currentX) * this.lerp;
+		this.currentY += (this.targetY - this.currentY) * this.lerp;
 
+		context.arc(this.currentX, this.currentY, r, 0, Math.PI * 2, false);
 
-    /*
-     ----------------------------------------------------------------------
-     Animated menu
-     ----------------------------------------------------------------------
-     */
-    $('.menu-img').hover(function() {
+		context.closePath();
+		context.fill();
+	}
 
-        var $div = $(this);
-        var img = document.createElement('img');
-        var img_name = $div.attr("data-img-name");
-        img.src = "./assets/img/menu/" + img_name + ".gif?t=" + new Date().getTime();
+	setTarget(x, y) {
 
-        $(img).load(function(){
-            $div.attr("src",img.src);
-        });
+	}
+}
 
-    }, function(){
+class Canvas {
+	constructor(element, particleSpacing = 50) {
+		this.canvas = element;
+		this.context = element.getContext('2d');
 
-        var $div = $(this);
-        var img_name = $div.attr("data-img-name");
-        var src = "./assets/img/menu/" + img_name + ".png";
-        $div.attr("src",src);
+		this.particleSpacing = particleSpacing;
 
-    });
+		window.addEventListener('resize', () => this.init());
+		this.init();
+	}
 
-    /*
-     ----------------------------------------------------------------------
-     Animation
-     ----------------------------------------------------------------------
-     */
-    $('.animated').appear(function() {
-        var elem = $(this);
-        var animation = elem.data('animation');
-        if ( !elem.hasClass('visible') ) {
-            var animationDelay = elem.data('animation-delay');
-            if ( animationDelay ) {
-                setTimeout(function(){
-                    elem.addClass( animation + " visible" );
-                }, animationDelay);
-            } else {
-                elem.addClass( animation + " visible" );
-            }
-        }
-    });
+	init () {
+		this.stop();
+		this.clear();
 
+		this.resize();
 
-    /*
-     ----------------------------------------------------------------------
-     Nice scroll
-     ----------------------------------------------------------------------
-     */
-    $("html").niceScroll({
-        cursorcolor: '#fff',
-        cursoropacitymin: '0',
-        cursoropacitymax: '1',
-        cursorwidth: '2px',
-        zindex: 999999,
-        horizrailenabled: false,
-        enablekeyboard: false
-    });
+		this.createParticles();
+		this.animate();
+	}
 
-    /*
-     ----------------------------------------------------------------------
-     Progress Bars
-     ----------------------------------------------------------------------
-     */
-    $('.progress-bar').on('inview', function (event, isInView) {
-        if (isInView) {
-            $(this).css('width',  function() {
-                return ($(this).attr('aria-valuenow')+'%');
-            });
-        }
-    });
+	resize() {
+		this.canvas.width = window.innerWidth;
+		this.canvas.height = window.innerHeight;
+	}
 
+	clear() {
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+	}
 
-    $('.dial').on('inview', function (event, isInView) {
-        if (isInView) {
-            var $this = $(this);
-            var myVal = $this.attr("value");
-            //var color = $this.attr("data-color"); // Uncomment after color selection
-            var color = $.cookie("colour-skills"); // Delete after color selection
-            $this.knob({
-                readOnly: true,
-                width: 160,
-                height: 160,
-                rotation: 'clockwise',
-                thickness: .3,
-                inputColor: color,
-                bgColor: '#ffffff',
-                fgColor: color,
-                'draw' : function () {
-                    $(this.i).val(this.cv + '%')
-                }
-            });
-            $({
-                value: 0
-            }).animate({
-                value: myVal
-            }, {
-                duration: 1000,
-                easing: 'swing',
-                step: function() {
-                    $this.val(Math.ceil(this.value)).trigger('change');
-                }
-            });
-        }
-    });
+	createParticles() {
+		var cols = Math.floor(this.canvas.width / this.particleSpacing),
+			rows = Math.floor(this.canvas.height / this.particleSpacing),
+			colGutter = (this.particleSpacing + (this.canvas.width - cols * this.particleSpacing)) / 2,
+			rowGutter = (this.particleSpacing + (this.canvas.height - rows * this.particleSpacing)) / 2;
 
-    /*
-     ----------------------------------------------------------------------
-     Sliders
-     ----------------------------------------------------------------------
-     */
-    $("#education-slider").owlCarousel({
+		this.particles = [];
+		for (let col = 0; col < cols; col++) {
+			for (let row = 0; row < rows; row++) {
+				let x = col * this.particleSpacing + colGutter,
+						y = row * this.particleSpacing + rowGutter,
+						particle = new Particle(this.context, x, y);
+				this.particles.push(particle);
+			}
+		}
+	}
 
-        navigation : true, // Show next and prev buttons
-        navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-        pagination: false,
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-    });
+	draw() {
+		this.clear();
+		if (this.particles) {
+			for (let i = 0; i < this.particles.length; i++) {
+				this.particles[i].draw();
+			}
+		}
+	}
 
-    $("#work-slider").owlCarousel({
+	animate() {
+		this.draw();
+		this.animationFrame = window.requestAnimationFrame(() => this.animate());
+	}
 
-        navigation : true, // Show next and prev buttons
-        navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-        pagination: false,
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
+	stop() {
+		window.cancelAnimationFrame(this.animationFrame);
+	}
+}
+var cnvs = new Canvas(document.getElementById('canvas'));
 
-    });
-
-    /*
-     ----------------------------------------------------------------------
-     Animated Counter
-     ----------------------------------------------------------------------
-     */
-    $('.count').each(function () {
-        $(".total-numbers .sum").appear(function() {
-            var counter = $(this).html();
-            $(this).countTo({
-                from: 0,
-                to: counter,
-                speed: 2000,
-                refreshInterval: 60
-            });
-        });
-    });
-
-    /*
-     ----------------------------------------------------------------------
-     Style switcher
-     ----------------------------------------------------------------------
-     */
-
-    var style = ('#stylesheet-new');
-    $('.new-colour').on("click", function(el){
-        el.preventDefault();
-        var id = $(this).attr('href');
-
-        $.cookie("colour-scheme",id);
-
-        $(style).attr('href', 'assets/css/colour-scheme/' + id + '.css');
-        $(style).attr('data-color', colour_scheme);
-        $.cookie("colour-skills",$(this).attr('data-color'));
-    });
-
-    $('.new-bg').on("click", function(el){
-        el.preventDefault();
-        var color = $(this).attr('data-bg');
-
-        $.cookie("colour-bg",color);
-
-        $(style).attr('data-bg', color);
-        $("body").css('background-color',color);
-    });
-
-    $('.style-open').on("click", function(el){
-        el.preventDefault();
-        $('.style-switcher').toggleClass('style-off');
-    });
-
-    var colour_scheme = $.cookie("colour-scheme");
-    var colour_bg = $.cookie("colour-bg");
-    if( colour_scheme != "" && colour_scheme != undefined ){
-        $(style).attr('href', 'assets/css/colour-scheme/' + colour_scheme + '.css');
-        $(style).attr('data-color', colour_scheme);
-    } else{
-        $.cookie("colour-scheme","color-blue");
-    }
-    if ( colour_bg != "" && colour_bg != undefined ){
-        $("body").css('background-color',colour_bg);
-    }
-
-
-
-}); // End $(document).ready(function(){
+$('body').mousemove(function(e) {
+    var x = (e.pageX * -1 / 10);
+    $("#canvas").animate({
+      left: x + 'px'
+    }, 10);
+});
