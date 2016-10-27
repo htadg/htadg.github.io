@@ -1,11 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
-body {
-  background-color: #D4D9ED;
-  height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
 
 #canvas, .background-svg, .container-info {
   position: absolute;
