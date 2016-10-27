@@ -14,7 +14,7 @@
 }
 
 .container-info {
-  z-index: 2;
+  z-index: 10;
 }
 body {
  background-color: #D4D9ED ;
