@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+body {
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTBF_KdT8Nw3er2eN-KB67zJfvDqOD-fo-pzafgCVCspB2DPYFhFw");
+}
 
 #canvas, .background-svg, .container-info {
   position: absolute;
