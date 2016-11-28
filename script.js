@@ -28,6 +28,11 @@ function fn() {
         function(){
             toggleClass(document.querySelector('.loader'),'loader');
         },1000);
+    var me = ['Web Developer', 'Pythonist', 'Data Enthusiast', 'JS Praiser', 'Tech Enthusiast', 'Hackathon Freak' ,'Very Friendly'];
+    setInterval(function(){
+        index = Math.floor(Math.random()*me.length);
+        document.querySelectorAll('.desc')[0].innerHTML = me[index];
+    },700);
 }
 
 if (document.readyState != 'loading') {

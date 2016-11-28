@@ -33,7 +33,7 @@ body
 	width: calc(25%)
 	height: calc(100%)
 	margin: 0 0 0 0
-	border: 1px solid rgb(62, 65, 60)
+	border: 2px solid rgb(62, 65, 60)
 	font-family: 'Lato', sans-serif
 	font-size: 2rem
 	text-align: center
@@ -72,22 +72,32 @@ body
 		margin-top: 20px
 		font-size: 6.5vw
 	.desc
-		font-size: 1rem
+		font-size: 1.5rem
+	.links
+		margin: 10px 0 0
+		img
+			width: 50px
+			margin: 0 10px
+			cursor: crosshair
+			&:hover
+				transform: scale(1.4)
+				transition: all 0.2s linear
 	.cta
-		margin: 5px 0 0
+		margin: 20px 0 0
 		a
 			color: rgb(251, 249, 245)
 			text-decoration: none
+			font-size: 1.6em
 			span
 				position: relative
 				width: auto
 				height: auto
-				padding: 5px 20px
+				padding: 10px 20px
 				cursor: pointer
 				background: rgb(27, 63, 255)
 				&:hover
 					background: rgb(9, 42, 218)
-				box-shadow: 2px 2px 4px 0 #ccc, -2px -2px 4px 0 #cc
+				box-shadow: 0 2px 4px 0 #373636
 .third
 	@extend .card
 	padding: 0
@@ -112,13 +122,6 @@ body
 			background: rgba(10, 150, 87, 1)
 			transition: background 0.3s ease-in
 
-.links
-	margin: 10px 0 0
-	img
-		margin: 0 5px
-		&:hover
-			transform: scale(1.4)
-			transition: all 0.2s linear
 
 .fadeOut
 	animation: fadeOut 1s ease-in
