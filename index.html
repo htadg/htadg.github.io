@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Hiten Sharma</title>
-    <link rel="stylesheet" href="assets/css/style.min.css">
-</head>
-<!--fucked up shit; needs to be beautified -->
-<body>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-    <canvas id="canvas"></canvas>
-    <div class="table">
-        <div class="table-cell">
-            <div class="container">
-                <svg class="background-svg" width="400px" height="300px" viewbox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox" id="filter-1"><feoffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset><feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.095 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset><feGaussianBlur stdDeviation="1.5" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur><feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite><feColorMatrix values="0 0 0 0 0.647959184   0 0 0 0 0.549016553   0 0 0 0 0.549016553  0 0 0 0.35 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode><feMergeNode in="shadowMatrixInner1"></feMergeNode></feMerge></filter></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Artboard-1" fill="#8B65E4"><path d="M187.785156,200 L180,232 L66,232 L58.2148437,200 L187.785156,200 Z" id="Rectangle-1" filter="url(#filter-1)"></path><path d="M349.760339,49.1234675 L375.905579,277.733833 L199.999999,277.733834 L43.9648432,143.710938 L349.760339,49.1234675 Z" id="Triangle-1" filter="url(#filter-1)"></path><path d="M399.8936,96.1889997 L29.4623426,250.140552 L0,36.4302476 L399.8936,96.1889997 Z" id="Triangle-2" filter="url(#filter-1)"></path></g></g></svg>
-                <div class="container-info">
-                    <h1>
-          Hey! <br />I'm <span>Hiten Sharma</span>, <span class="info">Python &amp; Web developer</span>
-        </h1>
-                    <div class="box">
-                        <a class="box-item" href="https://www.linkedin.com/in/htadg" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a class="box-item" href="https://www.github.com/htadg" target="_blank"><i class="fa fa-github"></i></a>
-                        <a class="box-item" href="mailto:sharmahiten3@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><img class="me" src="assets/img/hiten.svg" alt="Me" >
-</body>
-
+    <meta name="description" content="Hiten Sharma's Profile, Python &amp; Web Developer, freelancer">
+    <meta name="keywords" content="Portfolio, webdeveloper">
+    <meta meta name="author" content="Hiten Sharma">
+    <meta meta name="copyright" content="© Copyright 2016 - Hiten Sharma">
+    <meta property="og:title" content="Hiten Sharma | Python &amp; Web Developer">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="http://htadg.github.io">
+    <meta property="og:site-name" content="Hiten Sharma | Python &amp; Web Developer">
+    <meta name="description" content="Hiten Sharma's Profile, Python &amp; Web Developer, freelancer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SharmaHiten">
+    <meta name="twitter:creator" content="@SharmaHiten">
+    <meta name="twitter:title" content="Hiten Sharma | Python &amp; Web Developer">
+    <meta name="twitter:description" content="Hiten Sharma's Profile, Python &amp; Web Developer, freelancer">
+    <meta name="twitter:image:src" content="">
+    <meta itemprop="name" content="Hiten Sharma | Python &amp; Web Developer">
+    <meta itemprop="description" content="Hiten Sharma's Profile, Python &amp; Web Developer, freelancer">
+    <meta itemprop="image" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <style>
+      .loader{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(86, 54, 212);
+          z-index: 9999;}
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="container">
+      <div class="card first">
+        <div class="top">A1</div>
+        <div class="bottom">A2</div>
+      </div>
+      <div class="card second">
+        <div class="heading">hiten&nbsp;<b>SHARMA</b></div>
+        <div class="desc">Python - Web - Data Enthusiast</div>
+        <div class="links"><a href="https://www.facebook.com/htadg"></a><img src="img/facebook.svg" width="30px"><a href="https://www.github.com/htadg"></a><img src="img/github.svg" width="30px"><a href="https://linkedin.com/in/htadg"></a><img src="img/linkedin.svg" width="30px"><a href="https://www.twitter.com/SharmaHiten"></a><img src="img/twitter.svg" width="30px"><a href="mailto:sharmahiten3@gmail.com"></a><img src="img/mail.svg" width="30px"></div>
+        <div class="cta"><a href="https://www.github.com/htadg"><span>My Projects</span></a></div>
+      </div>
+      <div class="card third">
+        <div class="top">C1</div>
+        <div class="bottom">C2</div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
 </html>
