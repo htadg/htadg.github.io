@@ -25,9 +25,9 @@ function fn() {
     loadCss("./style.min.css");
 
     var image = document.createElement('img');
-    image.src = 'https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png';
+    image.src = 'img/background1.png';
     var container = document.querySelector('.container');
-    container.style.background = "url('https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png') center top fixed no-repeat";
+    container.style.background = "url('img/background1.png') center top fixed no-repeat";
     container.style.backgroundSize = "cover";
 
     toggleClass(document.querySelector('.loader'), 'fadeOut');
