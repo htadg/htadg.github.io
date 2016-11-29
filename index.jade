@@ -52,23 +52,24 @@ html
                 .desc Web Developer
                 .links
                     a(href="https://www.facebook.com/htadg")
-                    img(src="img/facebook.svg" width="40px")
+                        img(src="img/facebook.svg" width="40px")
                     a(href="https://www.github.com/htadg")
-                    img(src="img/github.svg" width="40px")
+                        img(src="img/github.svg" width="40px")
                     a(href="https://linkedin.com/in/htadg")
-                    img(src="img/linkedin.svg" width="40px")
+                        img(src="img/linkedin.svg" width="40px")
                     a(href="https://www.twitter.com/SharmaHiten")
-                    img(src="img/twitter.svg" width="40px")
+                        img(src="img/twitter.svg" width="40px")
                     a(href="mailto:sharmahiten3@gmail.com")
-                    img(src="img/mail.svg" width="40px")
+                        img(src="img/mail.svg" width="40px")
                 .cta
                     a(href="https://www.github.com/htadg")
                         span My Projects
                 .cta
-                    a(href="#")
+                    a(href="https://drive.google.com/open?id=0B0lWH2DuNf9iQW1idFd0UTdZRkE")
                         span Curriculum Vitae
             .card.third
                 .top C1
                 .bottom C2
 
-    script(type="text/javascript" src="script.js")
+    script(type="text/javascript").
+        function toggleClass(e,t){if(e&&t){var n=e.className,o=n.indexOf(t);o==-1?n+=" "+t:n=n.substr(0,o)+n.substr(o+t.length),e.className=n}}function fn(){loadCss("./style.min.css");var e=document.createElement("img");e.src="https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png";var t=document.querySelector(".container");t.style.background="url('https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png') center top fixed no-repeat",t.style.backgroundSize="cover",toggleClass(document.querySelector(".loader"),"fadeOut"),setTimeout(function(){toggleClass(document.querySelector(".loader"),"loader")},1e3);var n=["Web Developer","Pythonist","Data Enthusiast","JS Praiser","Tech Enthusiast","Hackathon Freak","Very Friendly"];setInterval(function(){index=Math.floor(Math.random()*n.length),document.querySelectorAll(".desc")[0].innerHTML=n[index]},700)}var loadCss=function(e){var t=document.createElement("link");t.type="text/css",t.rel="stylesheet",t.href=e,document.querySelector("head").appendChild(t)};"loading"!=document.readyState?fn():document.addEventListener("DOMContentLoaded",fn());

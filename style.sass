@@ -1,5 +1,3 @@
-$background_image: "img/background1.png"
-
 *,
 *::before,
 *::after
@@ -9,7 +7,7 @@ body
 	background: #af31ef
 	width: 100%
 	height: 100%
-	// overflow: hidden
+	overflow: hidden
 
 .container
 	position: absolute
@@ -20,8 +18,6 @@ body
 	margin: 0
 	width: 100%
 	height: 100%
-	// background: transparentize(rgb(230, 41, 41), 0.5)
-	background: url($background_image) center top fixed no-repeat
 	background-size: cover
 	color: rgb(255, 255, 255)
 	box-shadow: 2px 2px 4px 0 rgb(33, 32, 33)
@@ -72,27 +68,27 @@ body
 		margin-top: 20px
 		font-size: 6.5vw
 	.desc
-		font-size: 1.5rem
+		font-size: 80%
 	.links
 		margin: 10px 0 0
 		img
-			width: 50px
+			width: 5vw
 			margin: 0 10px
 			cursor: crosshair
 			&:hover
 				transform: scale(1.4)
 				transition: all 0.2s linear
 	.cta
-		margin: 20px 0 0
+		margin: 5vh 0 0
 		a
 			color: rgb(251, 249, 245)
 			text-decoration: none
-			font-size: 1.6em
+			font-size: 6vh
 			span
 				position: relative
 				width: auto
 				height: auto
-				padding: 10px 20px
+				padding: 1vw 1.5vw
 				cursor: pointer
 				background: rgb(27, 63, 255)
 				&:hover
@@ -144,7 +140,18 @@ body
 	.second
 		vertical-align: middle
 	.heading
-			font-size: 7.5vh !important
+		margin-top: 0 !important
+		font-size: 7.5vh !important
+	.desc
+		font-size: 7vw !important
+	.links
+		img
+			width: 6vh !important
+			margin: 0 5px !important
+	.cta
+		margin: 2vw 0 0 !important
+		a
+			font-size: 7vw !important
 	.second
 		height: 50%
 	.first, .third

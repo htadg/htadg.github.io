@@ -23,16 +23,31 @@ function toggleClass(element, className) {
 
 function fn() {
     loadCss("./style.min.css");
+
+    var image = document.createElement('img');
+    image.src = 'https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png';
+    var container = document.querySelector('.container');
+    container.style.background = "url('https://dl.dropboxusercontent.com/s/hejz80wdgicg592/background1.png') center top fixed no-repeat";
+    container.style.backgroundSize = "cover";
+
     toggleClass(document.querySelector('.loader'), 'fadeOut');
-    setTimeout(
-        function(){
-            toggleClass(document.querySelector('.loader'),'loader');
-        },1000);
-    var me = ['Web Developer', 'Pythonist', 'Data Enthusiast', 'JS Praiser', 'Tech Enthusiast', 'Hackathon Freak' ,'Very Friendly'];
-    setInterval(function(){
-        index = Math.floor(Math.random()*me.length);
+
+    setTimeout(function() {
+        toggleClass(document.querySelector('.loader'), 'loader');
+    }, 1000);
+    var me = [
+        'Web Developer',
+        'Pythonist',
+        'Data Enthusiast',
+        'JS Praiser',
+        'Tech Enthusiast',
+        'Hackathon Freak',
+        'Very Friendly'
+    ];
+    setInterval(function() {
+        index = Math.floor(Math.random() * me.length);
         document.querySelectorAll('.desc')[0].innerHTML = me[index];
-    },700);
+    }, 700);
 }
 
 if (document.readyState != 'loading') {
