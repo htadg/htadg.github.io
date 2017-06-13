@@ -9,6 +9,9 @@ html, body, .container {
   height: 100%;
   margin: 0px;
   overflow: hidden;
+  background: #7F00FF;
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 a {
@@ -264,18 +267,51 @@ div.box:first-child img.avatar {
     padding: auto auto!important;
   }
 
-  .box_wrapper:first-child {
-    display: block;
-    min-width: 80vw;
+  html, body, .container {
+    overflow: visible;
   }
 
-  .box_wrapper:last-child {
+  .box_wrapper/*:first-child */{
+    display: block;
+    min-width: 80vw;
+    margin-bottom: 20px;
+  }
+
+  /*.box_wrapper:last-child {
     display: none;
-  }
+  }*/
 
-  div.box_wrapper:first-child .box {
+  div.box_wrapper/*:first-child*/ .box {
     display: block;
     min-width: 80vw;
   }
+
+  .follow {
+    margin-top: 2vh;
+  }
+
+  .tab-content section h1 {
+  margin-top: 5px;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: center;
+  font-family: 'Fira Sans Condensed';
+}
+
+.intro {
+  font-family: 'roboto mono', monospace;
+  font-size: 100%;
+  padding: 0.5vh;
+  line-height: 3.5vh;
+}
+
+.intro i[class^=devicon] {
+  font-size: 4vh;
+}
+
+.small {
+  font-size: 100% !important;
+}
+
 
 }
