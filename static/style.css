@@ -262,7 +262,7 @@ div.box:first-child img.avatar {
   left: 75%;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 620px) {
 
   .container {
     padding: auto auto!important;
@@ -303,7 +303,7 @@ div.box:first-child img.avatar {
   font-family: 'roboto mono', monospace;
   font-size: 100%;
   padding: 0.5vh;
-  line-height: 3.5vh;
+  line-height: 5vh;
 }
 
 .intro i[class^=devicon] {
