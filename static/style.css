@@ -207,6 +207,7 @@ div.box:first-child img.avatar {
   font-size: 100%;
   padding: 1.7vw;
   line-height: 3vw;
+  margin-bottom: 0px;
 }
 
 .intro i[class^=devicon] {
