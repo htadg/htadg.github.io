@@ -67,6 +67,10 @@
     content: "\f0f6"
 }
 
+.fa-pencil:before {
+    content: "\f040"
+}
+
 .fa-gamepad:before {
     content: "\f11b"
 }
