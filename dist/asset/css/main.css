@@ -1,1 +1,1 @@
-*{margin:0;box-sizing:border-box}body{padding:20px;background-color:tomato;color:#fff}
+*{margin:0;box-sizing:border-box;padding:20px}body{background-color:#eaeaea}.main_container{width:1000px;margin:0 auto;background-color:#fafafa;border-radius:2px;box-shadow:rgba(0,0,0,.16) 0px 1px 4px}.main_container .header .name{padding:3px;font-family:Arial,"Sans Serif";font-size:70px;color:#2580ff}.main_container .header .name span{padding:inherit}.main_container .header .name .first::after{content:" "}.bold{font-weight:bold}

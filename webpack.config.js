@@ -32,17 +32,17 @@ module.exports = {
                 use: ['css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|jpeg)/,
+                test: /\.(png|jpg|jpeg|svg)/,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'img/[name][ext]'
+                  filename: 'asset/img/[name][ext]'
                 }
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'fonts/[name][ext][query]'
+                  filename: 'asset/fonts/[name][ext][query]'
                 }
             },
             {

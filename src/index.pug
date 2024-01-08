@@ -37,27 +37,40 @@ html
             //- ga('create', 'UA-75024902-1', 'auto');
             //- ga('send', 'pageview');
     body 
-        .main_container
-            .left_panel
-                h1.name Hiten Sharma 
-                .line.center
-                .designation
-                    div.area
-                        ul.list 
-                            li.item WEB DEVELOPER
-                            li.item JAVA DEVELOPER
-                            li.item PYTHON DEVELOPER
-                            li.item BLOCKCHAIN DEVELOPER
-                            li.item WEB3 ENTHUSIAST
-                            li.item SYSTEM ENGINEER
-                .line.center
-                .links 
-                    ul 
-                        li Home 
-                        li About 
-                        li Contact
-            .right_panel 
-                h1 Details
+        //- .main_container
+        //-     .left_panel
+        //-         h1.name Hiten Sharma 
+        //-         .line.center
+        //-         .designation
+        //-             div.area
+        //-                 ul.list 
+        //-                     li.item WEB DEVELOPER
+        //-                     li.item JAVA DEVELOPER
+        //-                     li.item PYTHON DEVELOPER
+        //-                     li.item BLOCKCHAIN DEVELOPER
+        //-                     li.item WEB3 ENTHUSIAST
+        //-                     li.item SYSTEM ENGINEER
+        //-         .line.center
+        //-         .links 
+        //-             ul 
+        //-                 li Homes
+        //-                 li About 
+        //-                 li Contact
+        //-     .right_panel 
+        //-         h1 Details
 
+        .main_container
+            .header
+                .left
+                    .name 
+                        span.bold.first HITEN
+                        span SHARMA
+                    .roles 
+                        code Blockchain Consultant | Web Developer | System Engineer | Mentor
+                    .links
+                        p Home, Linkedin, phone, email
+                .right
+                    img(src=require("./hiten_sharma.svg") alt="Hiten Sharma")
+            .body
 
         script(src=require("./js/main.js")) 

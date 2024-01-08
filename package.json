@@ -22,6 +22,7 @@
   "homepage": "https://github.com/htadg/htadg.github.io#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
     "pug-plugin": "^4.9.7",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
