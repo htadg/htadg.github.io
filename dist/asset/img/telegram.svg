@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 32 32"
+   fill="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="telegram.svg"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.585"
+     inkscape:cx="399.1453"
+     inkscape:cy="400"
+     inkscape:window-width="1366"
+     inkscape:window-height="664"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="SVGRepo_bgCarrier"
+     stroke-width="0" />
+  <g
+     id="SVGRepo_tracerCarrier"
+     stroke-linecap="round"
+     stroke-linejoin="round" />
+  <g
+     id="SVGRepo_iconCarrier"
+     style="fill:#ffffff"
+     transform="matrix(1.0989226,0,0,1.0989226,-1.582761,-1.582761)">
+    <path
+       id="circle1"
+       style="fill:#ffffff"
+       d="M 16,2 A 14,14 0 0 0 2,16 14,14 0 0 0 16,30 14,14 0 0 0 30,16 14,14 0 0 0 16,2 Z m 6.031094,7.0002344 c 0.570174,0.011735 1.056706,0.5541419 0.955469,1.2085936 l -1.844766,11.917266 c -0.1121,0.724499 -0.883313,1.102071 -1.482813,0.726172 l -5.345,-3.351797 c -0.557099,-0.3493 -0.648959,-1.15836 -0.185859,-1.63586 l 4.773984,-4.922031 c 0.1709,-0.1761 -0.04711,-0.460465 -0.247109,-0.322265 l -6.632187,4.581953 c -0.4903,0.338699 -1.098189,0.431221 -1.659688,0.252422 L 7.4214844,16.517891 C 6.8888149,16.348291 6.8512543,15.570265 7.3648438,15.344766 L 21.629219,9.0820312 c 0.134287,-0.058959 0.270296,-0.084505 0.401875,-0.081797 z" />
+    <defs
+       id="defs2">
+      <linearGradient
+         id="paint0_linear_87_7225"
+         x1="16"
+         y1="2"
+         x2="16"
+         y2="30"
+         gradientUnits="userSpaceOnUse">
+        <stop
+           stop-color="#ffffff"
+           id="stop1" />
+        <stop
+           offset="1"
+           stop-color="#ffffff"
+           id="stop2" />
+      </linearGradient>
+    </defs>
+  </g>
+</svg>

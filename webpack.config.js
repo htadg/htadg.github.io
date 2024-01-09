@@ -1,5 +1,6 @@
 const path = require('path');
 const PugPlugin = require('pug-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -19,6 +20,12 @@ module.exports = {
             css: {
                 filename: 'asset/css/[name].css',
             }
+        }),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            proxy: 'http://localhost:5000/',
+            reload: false
         })
     ],
     module: {
@@ -46,7 +53,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(ico|webmanifest)$/i,
+                test: /\.(ico|webmanifest|pdf)$/i,
                 type: 'asset/resource',
                 generator: {
                   filename: '[name][ext][query]'
