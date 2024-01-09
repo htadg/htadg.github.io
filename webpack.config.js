@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         publicPath: '/',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         clean: true
     },
     plugins: [
@@ -64,7 +64,7 @@ module.exports = {
     target: 'web',
     devServer: {
         static: {
-          directory: path.join(path.join(__dirname, 'dist'), 'asset')
+          directory: path.join(path.join(__dirname, 'docs'), 'asset')
         },
         watchFiles: {
           paths: ['./src/*.*', './src/**/*.*'],
