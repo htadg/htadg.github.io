@@ -1,0 +1,31 @@
+name: auto-npm-build
+run-name: Building Artifacts
+on:
+  push:
+    # branches: [ master ]
+    paths:
+      - 'src/**'
+      - package.json
+      - webpack.config.js
+jobs:
+  npm-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: npm install
+        run: npm ci
+      - name: building the app
+        run: npm run build
+      - name: check for changes
+        id: git-check
+        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+      - name: commit changed files
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+            git config --local user.name "GitHub Actions"
+            git add .
+            git commit -m "Build Artifacts"
+            git push origin HEAD:master
