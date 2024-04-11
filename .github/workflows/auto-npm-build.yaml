@@ -2,7 +2,7 @@ name: auto-npm-build
 run-name: Building Artifacts
 on:
   push:
-    # branches: [ master ]
+    branches: [ master ]
     paths:
       - 'src/**'
       - package.json
@@ -21,7 +21,7 @@ jobs:
         run: npm run build
       - name: check for changes
         id: git-check
-        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+        run: echo modified=$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi) >> $GITHUB_OUTPUT
       - name: commit changed files
         if: steps.git-check.outputs.modified == 'true'
         run: |
