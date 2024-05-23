@@ -48,8 +48,8 @@ body {
                 padding: inherit;
             }
 
-            .first::after {
-                content: " ";
+            .last {
+                font-weight: 300;
             }
         }
         .roles {

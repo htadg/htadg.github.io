@@ -2,48 +2,26 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 
 <svg
-   width="800px"
-   height="800px"
-   viewBox="0 0 32 32"
+   width="836.70166"
+   height="836.70166"
+   viewBox="0 0 33.468066 33.468066"
    fill="none"
    stroke="#006eb3"
    version="1.1"
    id="svg3"
-   sodipodi:docname="linkedin.svg"
-   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs3" />
-  <sodipodi:namedview
-     id="namedview3"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.585"
-     inkscape:cx="399.1453"
-     inkscape:cy="400"
-     inkscape:window-width="1366"
-     inkscape:window-height="664"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="SVGRepo_iconCarrier" />
   <g
-     id="SVGRepo_bgCarrier"
-     stroke-width="0" />
-  <g
-     id="SVGRepo_tracerCarrier"
-     stroke-linecap="round"
-     stroke-linejoin="round" />
-  <g
-     id="SVGRepo_iconCarrier">
+     id="SVGRepo_iconCarrier"
+     transform="translate(0.6400187,0.74292588)">
+    <circle
+       style="fill:#2580ff;fill-opacity:1;stroke-width:0.0499539"
+       id="path2-5"
+       cx="16.094015"
+       cy="15.991108"
+       r="16.709057" />
     <rect
        x="0.79093969"
        y="0.79093969"
@@ -54,16 +32,16 @@
        id="rect1"
        style="fill:#ffffff;stroke:#ffffff;stroke-width:1.08636;stroke-opacity:1" />
     <path
-       d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
-       fill="white"
+       d="m 12.6186,9.69215 c 0,0.93455 -0.8101,1.69215 -1.8093,1.69215 C 9.81004,11.3843 9,10.6267 9,9.69215 9,8.7576 9.81004,8 10.8093,8 c 0.9992,0 1.8093,0.7576 1.8093,1.69215 z"
+       fill="#ffffff"
        id="path1" />
     <path
-       d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z"
-       fill="white"
+       d="M 9.24742,12.6281 H 12.3402 V 22 H 9.24742 Z"
+       fill="#ffffff"
        id="path2" />
     <path
-       d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
-       fill="white"
+       d="M 17.3196,12.6281 H 14.2268 V 22 h 3.0928 c 0,0 0,-2.9504 0,-4.7951 0,-1.1073 0.3781,-2.2194 1.8866,-2.2194 1.7048,0 1.6946,1.449 1.6866,2.5716 -0.0104,1.4673 0.0144,2.9648 0.0144,4.4429 H 24 v -4.9463 c -0.0262,-3.1583 -0.8492,-4.6136 -3.5567,-4.6136 -1.6079,0 -2.6046,0.73 -3.1237,1.3904 z"
+       fill="#ffffff"
        id="path3" />
   </g>
 </svg>
