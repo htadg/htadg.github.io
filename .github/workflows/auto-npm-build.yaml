@@ -1,6 +1,7 @@
 name: auto-npm-build
 run-name: Building Artifacts
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
     paths:
