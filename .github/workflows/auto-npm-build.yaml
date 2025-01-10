@@ -28,6 +28,7 @@ jobs:
         if: steps.git-check.outputs.modified == 'true'
         run: |
             git config --local user.name "GitHub Actions"
+            git config --local user.email "sharma.hiten3@gmail.com"
             git add .
             git commit -m "Build Artifacts"
             git push origin HEAD:master
