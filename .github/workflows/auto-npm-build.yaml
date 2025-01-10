@@ -19,6 +19,8 @@ jobs:
         run: npm ci
       - name: building the app
         run: npm run build
+      - name: create cmake file
+        run: echo "hiten.is-a.dev" > docs/CNAME
       - name: check for changes
         id: git-check
         run: echo modified=$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi) >> $GITHUB_OUTPUT
