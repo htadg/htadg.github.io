@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-50/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#hero" class="text-lg font-bold text-gray-900 dark:text-white hover:text-[#1668d4] transition-colors">
+      hs<span class="text-[#1668d4]">.</span>
+    </a>
+
+    <!-- Nav links (desktop) -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
+      <li><a href="#about" class="hover:text-[#1668d4] dark:hover:text-[#6aa6fb] transition-colors">About</a></li>
+      <li><a href="#skills" class="hover:text-[#1668d4] dark:hover:text-[#6aa6fb] transition-colors">Skills</a></li>
+      <li><a href="#projects" class="hover:text-[#1668d4] dark:hover:text-[#6aa6fb] transition-colors">Projects</a></li>
+      <li><a href="#experience" class="hover:text-[#1668d4] dark:hover:text-[#6aa6fb] transition-colors">Experience</a></li>
+      <li>
+        <a
+          href="/HitenSharma_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded-lg border border-[#2580ff] text-[#1668d4] hover:bg-[#1668d4] hover:text-white transition-all duration-200 text-sm"
+        >
+          Resume
+        </a>
+      </li>
+    </ul>
+
+    <!-- Dark mode toggle -->
+    <button
+      id="theme-toggle"
+      aria-label="Toggle dark mode"
+      class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+    >
+      <!-- Sun icon (shown in dark mode) -->
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+      </svg>
+      <!-- Moon icon (shown in light mode) -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>

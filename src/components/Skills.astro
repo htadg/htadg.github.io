@@ -1,0 +1,54 @@
+---
+const skillGroups = [
+  {
+    category: "Languages",
+    skills: ["Java", "JavaScript", "TypeScript", "Python", "SQL"],
+  },
+  {
+    category: "Frameworks & Libraries",
+    skills: ["Spring Boot", "Spring Batch", "Spring Security", "React", "Single-SPA", "Django"],
+  },
+  {
+    category: "Architecture & Design",
+    skills: ["Micro-services", "REST APIs", "HLD & LLD", "Data Pipelines", "Monorepo"],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: ["Google Cloud Platform", "Docker", "Kubernetes", "CI/CD", "Robot Framework"],
+  },
+  {
+    category: "Databases & Analytics",
+    skills: ["PostgreSQL", "Sybase ASE", "Sybase IQ", "MongoDB", "Redis", "QlikView"],
+  },
+  {
+    category: "Web3 & Other",
+    skills: ["Ethereum", "Blockchain", "Solidity", "Machine Learning", "A/B Testing", "ARIA/WCAG"],
+  },
+];
+---
+
+<section id="skills" class="py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Skills</h2>
+      <div class="flex-1 h-px bg-gray-200 dark:bg-gray-800"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {skillGroups.map((group) => (
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-gray-800 hover:border-[#2580ff]/40 transition-colors duration-200">
+          <h3 class="text-sm font-semibold text-[#1668d4] uppercase tracking-widest mb-4 font-mono">
+            {group.category}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span class="px-3 py-1 text-sm rounded-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
