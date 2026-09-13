@@ -6,12 +6,12 @@ const experience = [
     period: "Feb 2026 – Present",
     location: "India · Remote",
     description: [
-      "Working on the Prisma advertising platform, owning features from product walkthroughs through to production delivery.",
-      "Built bulk import functionality enabling up to 100 campaigns and 10,000 media lines in a single operation using Java ExecutorService for parallel processing — dramatically cutting campaign setup time for large advertisers.",
-      "Enhanced a legacy core component in the Prisma Direct Integration pipeline serving Disney, improving reliability and maintainability of a high-stakes client integration.",
-      "Full delivery accountability on high-visibility features: requirement analysis, estimation, development, and product Q&As.",
+      "Built bulk import processing on a Java ExecutorService thread pool, letting advertisers create up to 100 campaigns and 10,000 media lines in a single operation — collapsing setup time for large accounts.",
+      "Modernised a legacy core component in the Prisma Direct Integration pipeline serving Disney, improving the reliability and maintainability of a high-stakes client integration.",
+      "Working across the Prisma advertising platform on high-volume campaign and media-line data flows.",
+      "Full delivery accountability on high-visibility features: client demos, requirement analysis, estimation, development, and product Q&As.",
     ],
-    tech: ["Java", "Spring Boot", "ExecutorService", "React"],
+    tech: ["Java 17", "Spring Boot", "Concurrency", "ExecutorService"],
     current: true,
   },
   {
@@ -20,13 +20,11 @@ const experience = [
     period: "Dec 2024 – Feb 2026",
     location: "Noida, Uttar Pradesh · Hybrid",
     description: [
-      "Focused on micro-services architecture, data engineering, and pre-sales technical design.",
-      "Architected Java Spring Web micro-services for downstream integrations, improving data exchange reliability and reducing inter-service coupling.",
-      "Built a Spring Batch POC with a multi-database connection pool for high-volume extraction — results directly shaped the production architecture roadmap.",
-      "Designed end-to-end HLD & LLD for a travel booking recommendation SaaS platform, translating client requirements into a scalable, cloud-ready technical blueprint.",
-      "Led an internal tech session on Spring Security to upskill the engineering team on auth flows and security best practices.",
+      "Built a Spring Batch service with a multi-database connection pool for high-volume extraction — the throughput results directly shaped the production architecture roadmap.",
+      "Authored end-to-end HLD & LLD for a travel booking recommendation SaaS platform, translating client requirements into a scalable, cloud-ready technical blueprint.",
+      "Led an internal tech session on Spring Security, covering authentication and authorisation flows and project bootstrapping, to upskill the engineering team.",
     ],
-    tech: ["Java", "Spring Boot", "Spring Batch", "Micro-services", "HLD/LLD"],
+    tech: ["Java", "Spring Boot", "Spring Batch", "Spring Security", "Micro-services", "HLD/LLD"],
     current: false,
   },
   {
@@ -35,13 +33,13 @@ const experience = [
     period: "Jan 2024 – Dec 2024",
     location: "Remote",
     description: [
-      "Embedded with a Fortune 500 payment card provider to build an analytics dashboard from the ground up.",
-      "Architected Java micro-services and a Single-SPA micro-frontend, decoupling the UI into independently deployable modules and reducing release friction significantly.",
+      "Architected Java micro-services backing an analytics dashboard built from the ground up for a Fortune 500 payment card provider.",
+      "Designed a Single-SPA micro-frontend, decoupling the UI into independently deployable modules and significantly reducing release friction.",
+      "Built a Robot Framework test suite covering critical user flows, reducing manual QA effort and strengthening regression confidence across releases.",
       "Delivered ARIA/WCAG-compliant UI components meeting enterprise accessibility standards.",
-      "Built a Robot Framework test suite covering critical user flows, reducing manual QA effort and strengthening regression confidence.",
       "Conducted technical interviews, contributing directly to engineering hiring decisions.",
     ],
-    tech: ["Java", "React", "Single-SPA", "Robot Framework", "ARIA/WCAG"],
+    tech: ["Java", "Micro-services", "REST APIs", "Single-SPA", "React", "Robot Framework"],
     current: false,
   },
   {
@@ -51,12 +49,12 @@ const experience = [
     location: "Bengaluru, Karnataka",
     description: [
       "Core contributor to a FinTech analytics and reporting platform for an asset management client.",
-      "Reduced QlikView report generation time from 12 min → under 8 min (~40% faster) by optimising the SQL pipeline for Mutual Fund analytics.",
-      "Supported the full annual after-tax processing cycle, optimising queries to ensure accurate, on-time report delivery.",
-      "Built QlikView dashboards translating complex operational data into insights for business stakeholders.",
-      "Mentored junior developers through code reviews and knowledge-transfer sessions, raising overall code quality.",
+      "Designed and maintained RESTful APIs serving as the integration backbone between internal systems, standardising data contracts and reducing coupling.",
+      "Cut Mutual Fund report generation from 12 min → under 8 min (~40% faster) by optimising the SQL pipeline feeding the analytics layer.",
+      "Supported the full annual after-tax processing cycle, optimising queries to ensure accurate, on-time report delivery to clients.",
+      "Mentored junior developers through code reviews and knowledge-transfer sessions, raising overall code quality and ensuring continuity across handovers.",
     ],
-    tech: ["Java", "QlikView", "Sybase IQ", "SQL"],
+    tech: ["Java", "REST APIs", "SQL Performance", "Sybase IQ", "QlikView"],
     current: false,
   },
   {
@@ -65,12 +63,11 @@ const experience = [
     period: "Oct 2021 – Jul 2022",
     location: "Bengaluru, Karnataka",
     description: [
-      "Built FinTech software for a global investment banking client — trading and reporting systems used by hundreds of users daily.",
-      "Developed core workflows using Java Spring, ReactJS, and Sybase ASE.",
-      "Recovered ~1 hour of productivity per user per day by independently identifying a review workflow bottleneck and designing a targeted UI fix.",
-      "Resolved a critical API bottleneck in the GP Valuations analytics pipeline, cutting QlikView report load time from ~60 min → 10–15 min (~85% reduction).",
+      "Built core trading and reporting workflows in Java Spring over Sybase ASE for a global investment banking client — systems used by hundreds of users daily.",
+      "Diagnosed and resolved a critical API bottleneck in the GP Valuations analytics pipeline, cutting report load time from ~60 min → 10–15 min (~85% reduction).",
+      "Recovered ~1 hour of productivity per user per day by independently identifying a review workflow bottleneck and designing a targeted fix.",
     ],
-    tech: ["Java", "Spring", "ReactJS", "Sybase ASE", "QlikView"],
+    tech: ["Java", "Spring", "REST APIs", "Sybase ASE", "ReactJS"],
     current: false,
   },
 ];
@@ -78,14 +75,14 @@ const experience = [
 const education = [
   {
     institution: "Maharaja Surajmal Institute of Technology",
-    degree: "Bachelor of Technology",
+    degree: "B.Tech, Computer Science & Engineering",
     period: "2015 – 2019",
-    detail: "CGPA: 8.66 / 10.0",
+    detail: "Guru Gobind Singh Indraprastha University · CGPA 8.66 / 10.0",
   },
 ];
 ---
 
-<section id="experience" class="py-24">
+<section id="experience" class="py-24 bg-white dark:bg-gray-900/50 transition-colors duration-300">
   <div class="max-w-5xl mx-auto px-6">
     <div class="flex items-center gap-4 mb-12">
       <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
@@ -174,7 +171,7 @@ const education = [
         <div>
           <h3 class="text-sm font-semibold text-[#1668d4] uppercase tracking-widest font-mono mb-4">Top Skills</h3>
           <div class="flex flex-wrap gap-2">
-            {["FinTech", "Ad Tech", "Spring Boot", "Micro-services", "GCP"].map((s) => (
+            {["Java", "Spring Boot", "Micro-services", "Spring Batch", "FinTech", "GCP"].map((s) => (
               <span class="px-3 py-1 text-sm rounded-md bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 text-blue-700 dark:text-blue-300 font-medium">
                 {s}
               </span>

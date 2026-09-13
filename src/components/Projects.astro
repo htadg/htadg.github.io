@@ -2,16 +2,16 @@
 const projects = [
   {
     title: "DataExport",
-    description: "A Spring Batch based tool to export database data on demand. Supports multiple data sources, native SQL queries, column filtering, and batch processing — built as a production-grade POC that directly shaped a real architecture roadmap.",
-    tech: ["Java", "Spring Boot", "Spring Batch", "PostgreSQL", "Docker"],
+    description: "A Spring Batch tool for on-demand, high-volume database export. Multiple data sources behind a connection pool, native SQL queries, column filtering, and chunked batch processing — built as a production-grade POC whose throughput results shaped a real architecture roadmap.",
+    tech: ["Java", "Spring Boot", "Spring Batch", "Connection Pooling", "PostgreSQL", "Docker"],
     github: "https://github.com/htadg/DataExport",
     live: null,
     period: "Jan 2025",
   },
   {
     title: "TaskIt Backend",
-    description: "A multi-tenant task manager POC demonstrating enterprise-grade security patterns: JWT authentication, role-based hierarchy & authorization, path-based access control, and namespace-based multi-tenancy — with a full architectural design including user board and role diagrams.",
-    tech: ["Java", "Spring Boot", "Spring Security", "JWT", "Multi-tenancy"],
+    description: "A multi-tenant task management API demonstrating enterprise Spring Security patterns: stateless JWT authentication for horizontal scalability, a role-based authorization hierarchy (RBAC), path-based access control, and namespace-based tenant isolation — with full HLD including user board and role diagrams.",
+    tech: ["Java", "Spring Boot", "Spring Security", "JWT", "RBAC", "Multi-tenancy"],
     github: "https://github.com/htadg/taskit-backend",
     live: null,
     period: "Oct 2024",
@@ -35,7 +35,7 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="py-24 bg-white dark:bg-gray-900/50 transition-colors duration-300">
+<section id="projects" class="py-24">
   <div class="max-w-5xl mx-auto px-6">
     <div class="flex items-center gap-4 mb-12">
       <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
