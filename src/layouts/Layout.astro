@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = "Hiten Sharma — Developer & Web3 Enthusiast",
-  description = "Backend systems and full-stack developer. Google Certified Cloud Developer. Web3 enthusiast, mentor.",
+  title = "Hiten Sharma — Senior Java Backend Engineer",
+  description = "Senior software engineer with 7 years building Java and Spring Boot micro-services for FinTech and AdTech. Micro-services architecture, Spring Batch pipelines, and API performance tuning.",
 } = Astro.props;
 ---
 
@@ -16,14 +16,50 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Hiten Sharma, htadg, portfolio, web3, blockchain, python, javascript, developer, ethereum, cloud" />
+    <meta name="keywords" content="Hiten Sharma, htadg, Senior Java Developer, Senior Java Engineer, Java, Java 17, Spring Boot, Spring Batch, Spring Security, Hibernate, JPA, micro-services, backend engineer, REST API, distributed systems, PostgreSQL, SQL performance tuning, Apache Kafka, Docker, Google Cloud, GCP, FinTech, AdTech, portfolio" />
     <meta name="author" content="Hiten Sharma" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Hiten Sharma" />
     <meta property="og:url" content="https://hiten.is-a.dev" />
+    <meta property="og:image" content="https://hiten.is-a.dev/img/HitenSharma.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://hiten.is-a.dev/img/HitenSharma.jpg" />
+
+    <!-- Structured data: helps recruiter tooling and AI search resolve the
+         job title and stack rather than guessing from prose. -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Hiten Sharma",
+      url: "https://hiten.is-a.dev",
+      image: "https://hiten.is-a.dev/img/HitenSharma.jpg",
+      jobTitle: "Senior Software Engineer",
+      description: "Senior backend engineer specialising in Java and Spring Boot micro-services for FinTech and AdTech platforms.",
+      email: "mailto:sharma.hiten3@gmail.com",
+      worksFor: { "@type": "Organization", name: "Mediaocean" },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Maharaja Surajmal Institute of Technology, Guru Gobind Singh Indraprastha University",
+      },
+      knowsAbout: [
+        "Java", "Spring Boot", "Spring Batch", "Spring Security", "Hibernate",
+        "Micro-services", "REST API design", "Distributed Systems",
+        "SQL Performance Tuning", "PostgreSQL", "Apache Kafka", "Docker",
+        "Google Cloud Platform", "React",
+      ],
+      sameAs: [
+        "https://github.com/htadg",
+        "https://linkedin.com/in/htadg",
+      ],
+    })} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

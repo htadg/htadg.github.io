@@ -1,28 +1,33 @@
 ---
+// Ordered deliberately: the Java/JVM depth a senior backend screen looks for
+// comes first, supporting breadth last.
 const skillGroups = [
   {
-    category: "Languages",
-    skills: ["Java", "JavaScript", "TypeScript", "Python", "SQL"],
-  },
-  {
-    category: "Frameworks & Libraries",
-    skills: ["Spring Boot", "Spring Batch", "Spring Security", "React", "Single-SPA", "Django"],
+    category: "Java & Spring",
+    skills: ["Java 17", "Spring Boot", "Spring Batch", "Spring Security", "Spring MVC", "Hibernate / JPA", "Reladomo", "Multithreading & Concurrency"],
+    primary: true,
   },
   {
     category: "Architecture & Design",
-    skills: ["Micro-services", "REST APIs", "HLD & LLD", "Data Pipelines", "Monorepo"],
+    skills: ["Micro-services", "REST API Design", "HLD & LLD", "Apache Kafka", "Multi-tenancy", "RBAC", "BPMN Workflow", "Micro-frontends"],
+    primary: true,
+  },
+  {
+    category: "Data & Persistence",
+    skills: ["PostgreSQL", "MySQL", "Sybase ASE", "Sybase IQ", "SQL Performance Tuning", "Connection Pooling", "MongoDB", "Redis"],
+    primary: true,
   },
   {
     category: "Cloud & DevOps",
-    skills: ["Google Cloud Platform", "Docker", "Kubernetes", "CI/CD", "Robot Framework"],
+    skills: ["Google Cloud Platform", "Docker", "Kubernetes", "CI/CD", "Git", "Autosys"],
   },
   {
-    category: "Databases & Analytics",
-    skills: ["PostgreSQL", "Sybase ASE", "Sybase IQ", "MongoDB", "Redis", "QlikView"],
+    category: "Testing & Quality",
+    skills: ["Robot Framework", "Fitnesse", "Code Review", "QlikView", "ARIA / WCAG"],
   },
   {
-    category: "Web3 & Other",
-    skills: ["Ethereum", "Blockchain", "Solidity", "Machine Learning", "A/B Testing", "ARIA/WCAG"],
+    category: "Frontend & Other",
+    skills: ["React", "TypeScript", "JavaScript", "Single-SPA", "Redux", "Python / Django", "Solidity / Ethereum"],
   },
 ];
 ---
@@ -36,13 +41,21 @@ const skillGroups = [
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {skillGroups.map((group) => (
-        <div class="p-6 rounded-xl bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-gray-800 hover:border-[#2580ff]/40 transition-colors duration-200">
+        <div class={`p-6 rounded-xl transition-colors duration-200 hover:border-[#2580ff]/40 ${
+          group.primary
+            ? 'bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/50'
+            : 'bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-gray-800'
+        }`}>
           <h3 class="text-sm font-semibold text-[#1668d4] uppercase tracking-widest mb-4 font-mono">
             {group.category}
           </h3>
           <div class="flex flex-wrap gap-2">
             {group.skills.map((skill) => (
-              <span class="px-3 py-1 text-sm rounded-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium">
+              <span class={`px-3 py-1 text-sm rounded-md font-medium ${
+                group.primary
+                  ? 'bg-white dark:bg-gray-800 text-blue-800 dark:text-blue-200 border border-blue-100 dark:border-blue-900/60'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
+              }`}>
                 {skill}
               </span>
             ))}
